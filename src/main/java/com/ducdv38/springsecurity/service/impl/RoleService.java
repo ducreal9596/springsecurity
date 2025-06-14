@@ -42,6 +42,6 @@ public class RoleService {
         // (STR) 2025-06-14 K23-840 DEV DucDV38 DEL PCML
         // roleRepository.deleteById(roleName);
         roleRepository.deleteById(roleName);
-        // (END) 2025-06-14 K23-840 DEV DucDV38 DELPCML
+        // (END) 2025-06-14 K23-840 DEV DucDV38 DEL PCML
     }
 }
