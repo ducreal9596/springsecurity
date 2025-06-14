@@ -136,9 +136,9 @@ public class AuthenticationService {
                     .id(jti)
                     .expiryTime(expiryTime)
                     .build();
-// (STR) 2025-06-14 K23-840 DEV DucDV38 DEL Federation
-// invalidateTokenRepository.save(invalidateToken);
-// (END) 2025-06-14 K23-840 DEV DucDV38 DEL Federation
+// (STR) 2025-06-14 K23-840 DEV DucDV38 ADD Federation
+ invalidateTokenRepository.save(invalidateToken);
+// (END) 2025-06-14 K23-840 DEV DucDV38 ADD Federation
 // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD  
 InvalidateToken invalidateToken = InvalidateToken.builder()
                     .id(jti)
