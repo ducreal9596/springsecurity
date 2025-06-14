@@ -55,7 +55,9 @@ public class UserServiceIpml implements IUserService {
         user.setRoles(Set.of((role)));
                         // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
         try {
-            user = userRepository.saveAndFlush(user);
+            // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
+            user = userRepository.save(user);
+            // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
         } catch (DataIntegrityViolationException e) {
              // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
             throw new AppException((ErrorCode.USER_EXISTED));
