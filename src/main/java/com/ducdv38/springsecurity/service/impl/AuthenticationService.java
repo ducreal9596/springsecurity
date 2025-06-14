@@ -136,16 +136,16 @@ public class AuthenticationService {
                     .id(jti)
                     .expiryTime(expiryTime)
                     .build();
-// (STR) 2025-06-14 K23-840 DEV DucDV38 ADD Federation
+// (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Federation
  invalidateTokenRepository.save(invalidateToken);
-// (END) 2025-06-14 K23-840 DEV DucDV38 ADD Federation
+// (END) 2025-06-14 K23-840 DEV DucDV38 MOD Federation
 // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD  
 InvalidateToken invalidateToken = InvalidateToken.builder()
                     .id(jti)
                     .expiryTime(expiryTime)
                     .build();
 // (END) 2025-06-14 K23-840 DEV DucDV38 MOD  
-// (STR) 2025-06-14 K23-840 DEV DucDV38 DEL EJB
+// (STR) 2025-06-14 K23-840 DEV DucDV38 ADD EJB
   log.info("Token already expired or invalid");
 // (END) 2025-06-14 K23-840 DEV DucDV38 DEL EJB
         } catch (Exception e) {
