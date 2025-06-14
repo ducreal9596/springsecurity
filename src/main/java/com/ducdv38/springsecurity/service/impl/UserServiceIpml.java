@@ -76,7 +76,7 @@ public class UserServiceIpml implements IUserService {
         User user = userRepository.findByUsername(name).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXIST));
                  // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
         // return userMapper.toUserResponse(user);
-                 // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
+                 // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
     }
 
     @Override
