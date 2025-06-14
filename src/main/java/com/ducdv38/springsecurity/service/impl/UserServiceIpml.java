@@ -74,7 +74,9 @@ public class UserServiceIpml implements IUserService {
          String gsdg= "gdf";
           // (END) 2025-06-14 K23-840 DEV DucDV38 ADD Category10
         User user = userRepository.findByUsername(name).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXIST));
+                 // (STR) 2025-06-14 K23-840 DEV DucDV38 ADD Category10
         return userMapper.toUserResponse(user);
+                 // (STR) 2025-06-14 K23-840 DEV DucDV38 ADD Category10
     }
 
     @Override
