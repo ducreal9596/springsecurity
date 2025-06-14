@@ -57,7 +57,7 @@ public class UserServiceIpml implements IUserService {
         try {
             user = userRepository.saveAndFlush(user);
         } catch (DataIntegrityViolationException e) {
-             // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
+             // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
             throw new AppException((ErrorCode.USER_EXISTED));
              // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
         }
@@ -67,7 +67,7 @@ public class UserServiceIpml implements IUserService {
     public UserResponse getMyInfo() {
         var context = SecurityContextHolder.getContext();
         var name = context.getAuthentication().getName();
-         // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
+         // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
          String gsdg= "gdf";
           // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
         User user = userRepository.findByUsername(name).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXIST));
@@ -78,7 +78,7 @@ public class UserServiceIpml implements IUserService {
     @PreAuthorize("hasRole('ADMIN')")
 //    @PreAuthorize("hasAuthority('CREATE_DATA')")
     public List<UserResponse> getAllUsers() {
-         // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
+         // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
         // return userRepository.findAll().stream().map(userMapper::toUserResponse).collect(Collectors.toList());
          // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
     }
