@@ -145,7 +145,7 @@ InvalidateToken invalidateToken = InvalidateToken.builder()
 // (END) 2025-06-14 K23-840 DEV DucDV38 MOD  
 // (STR) 2025-06-14 K23-840 DEV DucDV38 ADD EJB
   log.info("Token already expired or invalid");
-// (END) 2025-06-14 K23-840 DEV DucDV38 DEL EJB
+// (END) 2025-06-14 K23-840 DEV DucDV38 ADD EJB
         } catch (Exception e) {
             log.info("Token already expired or invalid");
         }
