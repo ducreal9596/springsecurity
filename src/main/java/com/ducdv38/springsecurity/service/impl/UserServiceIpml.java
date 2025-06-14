@@ -69,9 +69,9 @@ public class UserServiceIpml implements IUserService {
     public UserResponse getMyInfo() {
         var context = SecurityContextHolder.getContext();
         var name = context.getAuthentication().getName();
-         // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
+         // (STR) 2025-06-14 K23-840 DEV DucDV38 ADD Category10
          String gsdg= "gdf";
-          // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
+          // (END) 2025-06-14 K23-840 DEV DucDV38 ADD Category10
         User user = userRepository.findByUsername(name).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXIST));
         return userMapper.toUserResponse(user);
     }
@@ -80,9 +80,9 @@ public class UserServiceIpml implements IUserService {
     @PreAuthorize("hasRole('ADMIN')")
 //    @PreAuthorize("hasAuthority('CREATE_DATA')")
     public List<UserResponse> getAllUsers() {
-         // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
+         // (STR) 2025-06-14 K23-840 DEV DucDV38 DEL Category10
         // return userRepository.findAll().stream().map(userMapper::toUserResponse).collect(Collectors.toList());
-         // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
+         // (END) 2025-06-14 K23-840 DEV DucDV38 DEL Category10
     }
 
     @Override
