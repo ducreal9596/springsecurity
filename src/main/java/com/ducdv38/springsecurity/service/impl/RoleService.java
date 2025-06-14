@@ -31,9 +31,9 @@ public class RoleService {
         var permission = permissionRepository.findAllById(roleRequest.getPermissions());
         role.setPermissions(new HashSet<>(permission));
         role = roleRepository.save(role);
-        // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Federation
+        // (STR) 2025-06-14 K23-840 DEV DucDV38 DEL Federation
         return roleMapper.toRoleResponse(role);
-        // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Federation
+        // (END) 2025-06-14 K23-840 DEV DucDV38 DEL Federation
     }
 
     public List<RoleResponse> getAllRoles() {
