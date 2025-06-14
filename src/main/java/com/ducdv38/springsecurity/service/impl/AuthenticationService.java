@@ -136,7 +136,7 @@ public class AuthenticationService {
                     .id(jti)
                     .expiryTime(expiryTime)
                     .build();
-// (STR) 2025-06-14 K23-840 DEV DucDV38 MOD PCML
+// (STR) 2025-06-14 K23-840 DEV DucDV38 MODPCML
 // invalidateTokenRepository.save(invalidateToken);
                       invalidateTokenRepository.save(invalidateToken);
 // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category18
