@@ -50,11 +50,16 @@ public class UserServiceIpml implements IUserService {
                         .permissions(null)
                         .description("USER role")
                         .build()));
-        user.setRoles(Set.of(role));
+                        // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
+        // user.setRoles(Set.of(role));
+        user.setRoles(Set.of((role)));
+                        // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
         try {
             user = userRepository.saveAndFlush(user);
         } catch (DataIntegrityViolationException e) {
-            throw new AppException(ErrorCode.USER_EXISTED);
+             // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
+            throw new AppException((ErrorCode.USER_EXISTED));
+             // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
         }
         return userMapper.toUserResponse(user);
     }
@@ -62,6 +67,9 @@ public class UserServiceIpml implements IUserService {
     public UserResponse getMyInfo() {
         var context = SecurityContextHolder.getContext();
         var name = context.getAuthentication().getName();
+         // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
+         String gsdg= "gdf";
+          // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
         User user = userRepository.findByUsername(name).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXIST));
         return userMapper.toUserResponse(user);
     }
@@ -70,7 +78,9 @@ public class UserServiceIpml implements IUserService {
     @PreAuthorize("hasRole('ADMIN')")
 //    @PreAuthorize("hasAuthority('CREATE_DATA')")
     public List<UserResponse> getAllUsers() {
-        return userRepository.findAll().stream().map(userMapper::toUserResponse).collect(Collectors.toList());
+         // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
+        // return userRepository.findAll().stream().map(userMapper::toUserResponse).collect(Collectors.toList());
+         // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category10
     }
 
     @Override
