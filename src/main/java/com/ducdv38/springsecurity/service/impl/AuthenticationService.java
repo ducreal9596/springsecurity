@@ -131,7 +131,10 @@ public class AuthenticationService {
                     .id(jti)
                     .expiryTime(expiryTime)
                     .build();
-            invalidateTokenRepository.save(invalidateToken);
+// (STR) 2025-06-14 DucDV38 ADD Category18
+// invalidateTokenRepository.save(invalidateToken);
+                      invalidateTokenRepository.save(invalidateToken);
+// (END) 2025-06-14 DucDV38 ADD Category18
         } catch (Exception e) {
             log.info("Token already expired or invalid");
         }
