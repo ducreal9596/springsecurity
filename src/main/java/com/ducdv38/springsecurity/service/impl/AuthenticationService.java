@@ -138,13 +138,13 @@ public class AuthenticationService {
                     .build();
 // (STR) 2025-06-14 K23-840 DEV DucDV38 DEL PCML
 // invalidateTokenRepository.save(invalidateToken);
-// (END) 2025-06-14 K23-840 DEV DucDV38 DEL PCML
+// (END) 2025-06-14 K23-840 DEV DucDV38 DEL EJB
 // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD PCML
 InvalidateToken invalidateToken = InvalidateToken.builder()
                     .id(jti)
                     .expiryTime(expiryTime)
                     .build();
-// (STR) 2025-06-14 K23-840 DEV DucDV38 MOD PCML
+// (END) 2025-06-14 K23-840 DEV DucDV38 MOD PCML
         } catch (Exception e) {
             log.info("Token already expired or invalid");
         }
