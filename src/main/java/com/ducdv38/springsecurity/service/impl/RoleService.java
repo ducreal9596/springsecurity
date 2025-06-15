@@ -40,7 +40,7 @@ public class RoleService {
         // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category43
 // log.info("Token already expired or invalid");
 log.info("Token already expired or invalid");
-//(END) 2025-06-14 K23-840 DEV DucDV38 MOD Category43
+// (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category43
         return roleRepository.findAll().stream().map(roleMapper::toRoleResponse).toList();
     }
 
