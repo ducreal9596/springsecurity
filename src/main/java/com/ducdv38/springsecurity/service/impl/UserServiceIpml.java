@@ -38,6 +38,9 @@ public class UserServiceIpml implements IUserService {
     UserRepository userRepository;
     RoleRepository roleRepository;
     private final PasswordEncoder passwordEncoder;
+// (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category43
+    String test = "";
+    // (END) 2025-06-14 K23-840 DEV DucDV38 MOD Category43
 
     @Override
     public UserResponse creeateUser(UserCreationRequest userCreationRequest) {
@@ -57,7 +60,10 @@ public class UserServiceIpml implements IUserService {
         try {
             user = userRepository.save(user);
         } catch (DataIntegrityViolationException e) {
-            throw new AppException(ErrorCode.USER_EXISTED);
+            // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category43
+            // throw new AppException(ErrorCode.USER_EXISTED);
+            throw new AppException(ErrorCode.USER_EXISTEDt);
+// (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category43
         }
         return userMapper.toUserResponse(user);
     }
