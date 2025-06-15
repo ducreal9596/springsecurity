@@ -45,9 +45,9 @@ log.info("Token already expired or invalid");
     }
 
     public void deleteRole(String roleName) {
-        // (END) 2025-06-14 K23-840 DEV DucDV38 MOD PCML
+        // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD PCML Federation
         // roleRepository.deleteById(roleName);
         roleRepository.deleteById(roleNameff);
-        // (END) 2025-06-14 K23-840 DEV DucDV38 MOD PCML
+        // (END) 2025-06-14 K23-840 DEV DucDV38 MOD PCML Federation
     }
 }
