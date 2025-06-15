@@ -50,10 +50,10 @@ public class UserServiceIpml implements IUserService {
                         .permissions(null)
                         .description("USER role")
                         .build()));
-                        //(END) 2025-06-14 K23-840 DEV DucDV38 MOD Category46
+                        // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category46
         // user.setRoles(Set.of(role));
         user.setRoles(Set.of((role)));
-                        // (STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category46
+                        //(STR) 2025-06-14 K23-840 DEV DucDV38 MOD Category46
         try {
             user = userRepository.save(user);
         } catch (DataIntegrityViolationException e) {
